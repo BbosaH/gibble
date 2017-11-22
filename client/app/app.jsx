@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 // import { HashRouter, Route, Switch } from 'react-router-dom';
-import { config } from  'redux_store';
+import { config } from  'store/redux-store';
 import {Provider} from 'react-redux';
+import {HashRouter , Switch ,Route } from 'react-router-dom';
+import IndexContainer from 'containers/index/index'; 
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 
 
@@ -13,23 +16,25 @@ class App extends Component{
   render(){
     return(
 
-    	<div>Hello div</div>
-        /*<Switch>
-          <Route exact={true} path="/" component={IndexContainer}> </Route>
-          <Route exact={true} path="/home" component={HomeContainer}> </Route>
-          <Route exact={true} path="/shareDash" component={ShareKnowlegeOptions}> </Route>
-        </Switch>*/
+      <HashRouter>
     
+        <Provider store={store}>
+          <MuiThemeProvider>
+            <Switch>
+                <Route exact={true} path="/" component={IndexContainer}> </Route>
+            </Switch>
+          </MuiThemeProvider> 
+        </Provider>
+     
+      </HashRouter>
+
     )
   }
 }
 
 
 ReactDOM.render(
-  
-    <Provider store={store}>
-      <App />
-    </Provider>
+  <App/>
  
  , 
  document.getElementById('app')

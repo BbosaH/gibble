@@ -16,9 +16,17 @@ module.exports ={
 
   	alias : {
 
-      redux_store :path.resolve(__dirname, 'client/app/store/redux-store.jsx/'),
-      logging : path.resolve(__dirname,'client/app/middlewares/logging.jsx'),
-      combined_reducer : path.resolve(__dirname,'client/app/reducers/index.jsx'),
+      reducers: path.resolve(__dirname, 'client/app/reducers/'),
+      components: path.resolve(__dirname, 'client/app/components/'),
+      store:path.resolve(__dirname, 'client/app/store/'),
+      middlewares:path.resolve(__dirname, 'client/app/middlewares/'),
+      actions:path.resolve(__dirname, 'client/app/actions/'),
+      containers:path.resolve(__dirname, 'client/app/containers/'),
+      images:path.resolve(__dirname, 'client/app/img/')
+
+      // redux_store :path.resolve(__dirname, 'client/app/store/redux-store.jsx/'),
+      // logging : path.resolve(__dirname,'client/app/middlewares/logging.jsx'),
+      // combined_reducer : path.resolve(__dirname,'client/app/reducers/index.jsx'),
 
   	},
   	extensions : ['.js','.jsx']

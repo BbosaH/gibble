@@ -1,9 +1,9 @@
 
 import {createStore, applyMiddleware,combineReducers,compose} from 'redux';
 import reduxthunk from 'redux-thunk';
-import {ActionLogging,StateLogging} from 'logging';
+import {ActionLogging,StateLogging} from 'middlewares/logging';
 
-import combinedreducer from "combined_reducer"
+import combinedreducer from "reducers/index"
 
 export const config =(initalState={})=>{
 
